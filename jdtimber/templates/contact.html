@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header>
+	<div class="container-fluid">
+		<div class="row" id="navbar">
+			<div class="brand-name"><img src="{% static 'images/index/navbrand.png' %}"></div>
+			<div class="navbar">
+				<ul>
+					<li><a href="{% url 'index' %}" class="active">HOME</a></li>
+					<li><a href="{% url 'product' %}">PRODUCTS</a></li>
+					
+					<li><a href="{% url 'contact' %}">CONTACTS US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- home -->
+<section id="home">
+	<div class="container">
+		<div class="row full-screen">
+			<div class="home-content">
+				<div class="block">
+					<h1>Welcome!</h1>
+					<h1>JD Myanmar Timber Land</h1>
+					<h2>40 years ! ! !</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- home -->
+
+<!-- Enjuery Form -->
+<section>
+	<div class="teak-injuery">
+		<h1>Burme Teak</h1>
+		<p>Ready to enquire about our Genuine Burmese Teak from Direct Source? Write to us or give us a call now, we’re always happy to provide a free quotation and help out with any questions you may ask.</p>
+	</div>
+	<div class="form-injuery">
+
+		<div class="card border-success">
+		  <div class="card-body">
+		    <form action="{% url 'sendinjuiry' %}" method="post">
+		    	<h2>Inquiry Form</h2><br>
+		    	{% csrf_token %}
+		    	<!-- {{form.as_p}} -->
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Name :</label>
+		    		<div class="col-md-8">{{form.name}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Your Business :</label>
+		    		<div class="col-md-8">{{form.business}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Email :</label>
+		    		<div class="col-md-8">{{form.email}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Phone Number :</label>
+		    		<div class="col-md-8">{{form.phone}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Your Address :</label>
+		    		<div class="col-md-8">{{form.address}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Logs :</label>
+		    		<div class="col-md-8">{{form.logs}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Veneers :</label>
+		    		<div class="col-md-8">{{form.veneers}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Decking :</label>
+		    		<div class="col-md-8">{{form.decking}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Boards :</label>
+		    		<div class="col-md-8">{{form.boards}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Flooring :</label>
+		    		<div class="col-md-8">{{form.flooring}}</div>
+		    	</div>
+		    	<div class="form-group row">
+		    		<label class="col-md-2">Skirtings :</label>
+		    		<div class="col-md-8">{{form.skirtings}}</div>
+		    	</div>
+		    	<div>
+		    		<button type="submit" class="btn btn-outline-success">Send Inquiry</button>
+		    	</div>
+		    	
+			  
+			</form>
+		  </div>
+		</div>
+	</div>
+</section>
+<!-- Enjuery Form -->
+
+<br><br>
+
+<!-- Footer Partnership -->
+<section class="partnership">
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="address col-md-3">
+				<h2>JD Myanmar TimberLand</h2>
+				<h4>Min Dahma Street,</h4>
+				<h4>Hlaing Township,Yangon,</h4>
+				<h4>Myanmar</h4>
+			</div>
+			<div class="mailbox col-md-3">
+				<h4>Email : abcdef@gmail.com</h4>
+				<h4>Phone : +95 9-3453-2345-34</h4>
+			</div>
+			<div class="partnerimg col-md-6">
+				<img src="{% static 'images/index/partnership.png' %}">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Footer Partnership -->
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+	#home{
+		background-image: url({% static 'images/product/contactphoto.jpg' %});
+		background-size: cover;
+		min-height: 100vh;
+		background-position: center;
+		
+	}
+</style>
+
+
+
+{% endblock %}

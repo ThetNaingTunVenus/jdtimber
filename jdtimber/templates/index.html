@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header>
+	<div class="container-fluid">
+		<div class="row" id="navbar">
+			<div class="brand-name"><img src="{% static 'images/index/navbrand.png' %}"></div>
+			<div class="navbar">
+				<ul>
+					<li><a href="{% url 'index' %}" class="active">HOME</a></li>
+					<li><a href="{% url 'product' %}">PRODUCTS</a></li>
+					
+					<li><a href="{% url 'contact' %}">CONTACTS US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- home -->
+<section id="home">
+	<div class="container">
+		<div class="row full-screen">
+			<div class="home-content">
+				<div class="block">
+					<h1>Welcome!</h1>
+					<h1>JD Myanmar Timber Land</h1>
+					<h2>40 years ! ! !</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- home -->
+
+<!-- About section -->
+
+<section class="about-us">
+	<div class="container">
+		<div class="row">
+			<div class="section-title">
+				<h1>About Us</h1>
+				<p class="small text-uppercase">Information ablut us you contact information of teak centrer</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="about-content">
+				<div class="row">
+				<!-- <div class="img">
+					<img src="{% static 'images/index/750500.png' %}" style="width: 500px; height: 350px;">
+				</div> -->
+
+				<div class="text">
+					<h4>Our Company Group</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,<span>Myanmar Teak</span>
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <span>Burma Teak</span>
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="about-photo">
+					<div id="demo" class="carousel slide" data-ride="carousel">
+
+					  <!-- Indicators -->
+					  <ul class="carousel-indicators">
+					    <li data-target="#demo" data-slide-to="0" class="active"></li>
+					    <li data-target="#demo" data-slide-to="1"></li>
+					    <li data-target="#demo" data-slide-to="2"></li>
+					  </ul>
+
+					  <!-- The slideshow -->
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img src="{% static 'images/index/500x400.jpg' %}" alt="s1" style="width: 500px; height: 350px;">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="{% static 'images/index/500x4001.jpg' %}" alt="s2" style="width: 500px; height: 350px;">
+					    </div>
+					    <div class="carousel-item">
+					      <img src="{% static 'images/index/500x4002.jpg' %}" alt="s3" style="width: 500px; height: 350px;">
+					    </div>
+					  </div>
+
+					  <!-- Left and right controls -->
+					  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+					    <span class="carousel-control-prev-icon"></span>
+					  </a>
+					  <a class="carousel-control-next" href="#demo" data-slide="next">
+					    <span class="carousel-control-next-icon"></span>
+					  </a>
+
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- About Section -->
+<!-- Product Gellary -->
+
+<section class="productphoto">
+	<div class="container">
+		<div class="row">
+			<div class="section-title text-center">
+				<h1>Products Gellary</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="filter-buttons">
+				<ul id="filter-btns">
+					<li class="active" data-target="veneer">Veneer</li>
+					<li data-target="decking">Decking</li>
+					<li data-target="boards">Boards</li>
+					<li data-target="flooring">Flooring</li>
+					<li data-target="skirting">Skirting</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="product-gellary">
+				<div class="item" data-id="decking">
+					<div class="inner">
+					<img src="{% static 'images/product/6.jpg' %}" alt="decking">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Decking</h4>
+					</div>
+					</div>
+				</div>
+				<div class="item" data-id="boards">
+					<div class="inner">
+					<img src="{% static 'images/product/2.jpg' %}" alt="boards">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Boards</h4>
+					</div>
+					</div>
+				</div>
+				<div class="item" data-id="flooring">
+					<div class="inner">
+					<img src="{% static 'images/product/4.jpg' %}" alt="flooring">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Flooring</h4>
+					</div>
+					</div>
+				</div>
+				<div class="item" data-id="skirting">
+					<div class="inner">
+					<img src="{% static 'images/product/3.jpg' %}" alt="skirting">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Skirting</h4>
+					</div>
+					</div>
+				</div>
+				<div class="item" data-id="flooring">
+					<div class="inner">
+					<img src="{% static 'images/product/2.jpg' %}" alt="flooring">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Flooring</h4>
+					</div>
+					</div>
+				</div>
+				<div class="item" data-id="skirting">
+					<div class="inner">
+					<img src="{% static 'images/product/1.jpeg' %}" alt="skirting">
+					<div class="overlay">
+						<span class="fa fa-plus"></span>
+						<h4>Skirting</h4>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Product Gellary -->
+<!-- Light Box -->
+<div class="lightbox hide">
+	<span class="close-lightbox fa fa-close"></span>
+	<img src="{% static 'images/gellery/1.jpg' %}" alt="skirting">
+</div>
+<!-- Light Box -->
+
+<!-- Footer Partnership -->
+<section class="partnership">
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="address col-md-3">
+				<h2>JD Myanmar TimberLand</h2>
+				<h4>Min Dahma Street,</h4>
+				<h4>Hlaing Township,Yangon,</h4>
+				<h4>Myanmar</h4>
+			</div>
+			<div class="mailbox col-md-3">
+				<h4>Email : abcdef@gmail.com</h4>
+				<h4>Phone : +95 9-3453-2345-34</h4>
+			</div>
+			<div class="partnerimg col-md-6">
+				<img src="{% static 'images/index/partnership.png' %}">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Footer Partnership -->
+
+
+
+<!-- =================================================================== -->
+<style type="text/css">
+	#home{
+		background-image: url({% static 'images/index/mphoto.jpg' %});
+		background-size: cover;
+		min-height: 100vh;
+		background-position: center;
+		
+	}
+</style>
+
+{% endblock %}
